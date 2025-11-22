@@ -1,0 +1,281 @@
+/* ULTRA DARK NOIR (clean version) */
+:root {
+  --bg: #050506;
+  --panel: rgba(255,255,255,0.05);
+  --text-main: #fff;
+  --text-soft: rgba(255,255,255,0.85);
+  --accent: #ff3c3c;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-main);
+  font-family: Inter, Arial, sans-serif;
+}
+
+/* Navbar */
+.dark-nav {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.nav-link {
+  font-size: 1.2rem;
+  color: var(--text-soft) !important;
+}
+.nav-link:hover {
+  color: var(--accent) !important;
+}
+
+/* ========= BRAND LOGO KECIL ========= */
+.brand-logo-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.5);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--accent);
+  background: rgba(255,255,255,0.06);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+/* Kalau nanti pakai gambar logo */
+.brand-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* ===== [NEW] brand text color ===== */
+.navbar-brand {
+  color: var(--text-main) !important;
+}
+.navbar-brand:hover {
+  color: var(--accent) !important;
+}
+.spacer { height: 90px; }
+
+/* Section styling */
+.section {
+  padding: 70px 0;
+}
+.section-title {
+  font-size: 2.4rem;
+  margin-bottom: 6px;
+}
+.section-desc {
+  font-size: 1.3rem;
+  color: var(--text-soft);
+  margin-bottom: 20px;
+}
+
+/* Horizontal image gallery */
+.image-row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 8px;
+}
+
+.image-row::-webkit-scrollbar {
+  height: 10px;
+}
+.image-row::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 5px;
+}
+
+.art-img {
+  height: 70vh;
+  background: black;
+  object-fit: contain;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+/* ========= highlight gambar aktif di semua grup ========= */
+.art-img.active-frame {
+  outline: 2px solid var(--accent);
+  box-shadow: 0 0 25px rgba(255,60,60,0.5);
+}
+
+.small-hint {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+}
+
+/* ========= [NEW] LIGHTBOX OVERLAY ========== */
+.lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;              /* default: tidak tampil */
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.lightbox-backdrop.active {
+  display: flex; 
+}
+
+.lightbox-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  text-align: center;
+  position: relative;
+}
+
+.lightbox-content img,
+.lightbox-content video {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 12px;
+  background: black;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  color: var(--text-soft);
+  text-transform: uppercase;
+}
+
+.lightbox-close:hover {
+  color: var(--accent);
+}
+
+.lightbox-hint {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+}
+
+.gallery-img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+/* ========= [NEW] Ultra Dark Noir Hero & About ========= */
+.noir-section {
+  padding: 80px 0;
+  background: radial-gradient(circle at top, rgba(255,255,255,0.06), transparent 55%);
+}
+
+.page-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.noir-card {
+  background: var(--panel);
+  border-radius: 18px;
+  padding: 28px 26px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.7);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* Typography helpers */
+.big-text {
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.muted-dark {
+  color: rgba(255,255,255,0.6);
+}
+
+/* Fallback text-center kalau tidak pakai Bootstrap class */
+.text-center {
+  text-align: center;
+}
+
+/* ========= [NEW] Social media & footer ========= */
+.social-section {
+  padding: 50px 0 20px;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.02);
+  text-decoration: none;
+  color: var(--text-soft);
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+}
+
+.social-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(255,60,60,0.3);
+}
+
+/* Museum section: PPSX link button */
+.museum-link-wrapper {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.museum-link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.03);
+  text-decoration: none;
+  color: var(--text-soft);
+  font-size: 1rem;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.museum-link-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+  box-shadow: 0 0 18px rgba(255,60,60,0.35);
+}
+
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 16px 0 24px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.6);
+}
+.site-footer span {
+  color: var(--accent);
+}
