@@ -79,7 +79,7 @@
 </section>
 
 
-<!-- ========= [NEW] SECTION: PORTFOLIO OVERVIEW ========= -->
+<!-- ========= SECTION: PORTFOLIO OVERVIEW ========= -->
 <section id="portfolio" class="noir-section text-center">
   <div class="container page-content">
     <h2>Portfolio Collections</h2>
@@ -524,12 +524,11 @@
 
       if (isGalleryMedia || isLightboxMedia) {
         e.preventDefault();
-        // Notif sederhana
         alert('Downloading or copying artworks is prohibited!! Please Be Aware of that.');
       }
     });
 
-        // === SIMPLE AUTO-PLAY / PAUSE UNTUK VIDEO ANIMASI ===
+        // === SIMPLE AUTO-PLAY / PAUSE ANIMASI ===
     const animVideos = document.querySelectorAll('#animation video');
 
     if ('IntersectionObserver' in window && animVideos.length > 0) {
@@ -553,6 +552,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
 
